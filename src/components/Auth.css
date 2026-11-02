@@ -1,0 +1,146 @@
+/* خلفية تغطي الشاشة الكل وتجيب المودال في الوسط بالملّي */
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية مظلمة شفافة */
+  display: flex;
+  justify-content: center; /* توسيط أفقي */
+  align-items: center;     /* توسيط عمودي */
+  z-index: 9999;           /* باش يظهر فوق كل شي */
+}
+
+/* صندوق نافذة تسجيل الدخول الرئيسي */
+.auth-modal {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(216, 27, 96, 0.15);
+  text-align: right;
+  direction: rtl;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  left: 500px; 
+  top: 50px;
+}
+
+/* عنوان النافذة */
+.auth-modal h2 {
+  margin-bottom: 24px;
+  color: #2c2c2c;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* مجموعات الحقول */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #4a4a4a;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+.form-group input:focus {
+  border-color: #d81b60;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.1);
+}
+
+/* زر تسجيل الدخول الأساسي */
+.auth-modal button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #d81b60, #ad1457);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.3);
+  transition: all 0.3s ease;
+}
+
+.auth-modal button[type="submit"]:hover {
+  background: linear-gradient(135deg, #ad1457, #880e4f);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(216, 27, 96, 0.4);
+}
+
+/* رسائل الخطأ */
+.error {
+  color: #c62828;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  text-align: center;
+  border: 1px solid #ffcdd2;
+}
+
+/* رسائل النجاح */
+.success {
+  color: #2e7d32;
+  background: #e8f5e9;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  text-align: center;
+  border: 1px solid #c8e6c9;
+}
+
+/* النص الموجود في الأسفل مع زر التبديل */
+.auth-modal > p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+/* زر التبديل لإنشاء حساب جديد */
+.switch-link {
+  background: none;
+  border: none;
+  color: #d81b60;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0;
+  margin-right: 5px;
+  transition: color 0.2s;
+}
+
+.switch-link:hover {
+  color: #ad1457;
+  text-decoration: underline;
+}
+
+/* أنيميشن خفيف للظهر */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

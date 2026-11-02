@@ -1,0 +1,259 @@
+/* App.css */
+
+/* إعادة ضبط الإعدادات الافتراضية */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfafb; /* لون خلفية ناعم جداً */
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ستايل شريط التنقل */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  color: #d88c9a; /* لون وردي أنيق يناسب مستحضرات التجميل */
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #d88c9a;
+}
+
+/* ستايل المحتوى الرئيسي */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* ستايل قسم الترحيب */
+.hero {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  max-width: 650px;
+  width: 100%;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #2c2c2c;
+}
+
+.hero p {
+  color: #777;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.shop-btn {
+  background-color: #d88c9a;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shop-btn:hover {
+  background-color: #c07381;
+  transform: translateY(-2px);
+}
+
+/* ستايل مؤقت لمكان المنتجات */
+.products-placeholder {
+  margin-top: 50px;
+  padding: 30px;
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+/* ستايل تذييل الصفحة */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
+/* App.css additions */
+.products-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #2c2c2c;
+  margin-bottom: 30px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+
+.cart-link {
+  background-color: #fdfafb;
+  border: 1px solid  #fdfafb;
+  color: #d88c9a !important;
+  font-weight: 900;
+  transition: all 0.3s ease;
+}
+
+.cart-link:hover {
+  background-color: #d88c9a;
+  color: white !important;
+}
+
+
+/* App.css addition */
+html {
+  scroll-behavior: smooth;
+}
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.header-actions span {
+  font-weight: 600;
+  color: #444;
+}
+
+/* تنسيق الأزرار (تسجيل الدخول، إنشاء حساب، تسجيل الخروج) */
+.header-actions button {
+  background-color: #d81b60;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-actions button:hover {
+  background-color: #ad1457;
+  transform: translateY(-1px);
+}
+
+/* تخصيص زر تسجيل الخروج لو حبيتيه بلون مختلف (اختياري) */
+.header-actions button:last-child:not(:only-child) {
+  background-color: #757575;
+}
+
+.header-actions button:last-child:not(:only-child):hover {
+  background-color: #616161;
+}
+
+/* تنسيق قسم الأزرار واسم المستخدم في الـ Navbar */
+.navbar .header-actions,
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+}
+
+/* تنسيق اسم المستخدم المرحب به */
+.navbar span {
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* تنسيق أزرار Navbar (دخول، تسجيل، خروج) */
+.navbar button, 
+.nav-login-btn, 
+.nav-signup-btn, 
+.logout-btn {
+  background-color: #fce4ec; /* وردي فاتح هادئ */
+  color: #d81b60;          /* لون نص وردي غامق */
+  border: 1.5px solid #f8bbd0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* تأثير الـ Hover كي تقرب الماوس للزر في الـ Navbar */
+.navbar button:hover, 
+.nav-login-btn:hover, 
+.nav-signup-btn:hover, 
+.logout-btn:hover {
+  background-color: #d81b60;
+  color: white;
+  border-color: #d81b60;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(216, 27, 96, 0.2);
+}
+
+/* تخصيص زر تسجيل الخروج لو تحبي تعمله بلون مختلف قليلاً (اختياري) */
+.logout-btn {
+  background-color: #f5f5f5;
+  color: #616161;
+  border-color: #e0e0e0;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+  color: white;
+  border-color: #d32f2f;
+}
