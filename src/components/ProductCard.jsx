@@ -31,7 +31,7 @@ function ProductCard({ product, onAddToCart }) {
       finalPath = `${finalPath}.jpg`;
     }
     
-    return `http://localhost:5000${finalPath}`;
+    return `https://gglow-back.onrender.com${finalPath}`;
   };
 
   return (

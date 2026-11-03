@@ -7,7 +7,7 @@ function ProductList({ onAddToCart }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/products')
+    fetch('https://gglow-back.onrender.com/api/products')
       .then(res => {
         if (!res.ok) {
           throw new Error('فشل في جلب المنتجات من السيرفر');
